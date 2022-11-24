@@ -8,8 +8,7 @@ while confirm == False:
         break
     data,confirm = Charge.cargaArchivo(FileName)
 
-
-use = input('Que valor desea analizar: ')
+use = input(procesingData.colNames(data))
 var =procesingData.separate(data,use)
 unique,count = procesingData.countValues(var)
 gf.Grafica(unique,count)

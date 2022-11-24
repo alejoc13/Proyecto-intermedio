@@ -15,3 +15,12 @@ def countValues(var):
 def separate(data,name):
     aux =  list(map(lambda x: x[name],data))
     return aux
+
+def colNames(data):
+    menu = ''
+    cols = [names for names in data[0].keys()]
+    for i in range (len(cols)):
+        menu = menu+  str(i)+". "+ str(cols[i])+"\n"
+    menu = menu + "Eleja una de las opciones disponibles escribiendo el nombre de la columna para ver el conteo de sus datos: "
+    return menu
+
