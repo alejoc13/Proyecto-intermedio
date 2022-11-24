@@ -22,5 +22,5 @@ def colNames(data):
     for i in range (len(cols)):
         menu = menu+  str(i)+". "+ str(cols[i])+"\n"
     menu = menu + "Eleja una de las opciones disponibles escribiendo el nombre de la columna para ver el conteo de sus datos: "
-    return menu
+    return menu,cols
 

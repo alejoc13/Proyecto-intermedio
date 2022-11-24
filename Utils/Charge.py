@@ -12,7 +12,7 @@ def cargaArchivo(FileName):
                     data.append(aux)
         return data,True
     except:
-        print("Imposible cargar el archivo")
+        print("Archivo no encontrado o imposible de abrir")
         return data,False
 
 

@@ -9,10 +9,18 @@ while confirm == False:
     else:
         data,confirm = Charge.cargaArchivo(FileName)
 
-use = input(procesingData.colNames(data))
-var =procesingData.separate(data,use)
-unique,count = procesingData.countValues(var)
-gf.Grafica(unique,count)
+confirm = False
+menu, cols = procesingData.colNames(data)
+while confirm == False:
+    use = input(menu)
+    if use == "":
+        break
+    elif use not in cols:
+        print('Opcion no valida')
+    else:
+        var =procesingData.separate(data,use)
+        unique,count = procesingData.countValues(var)
+        gf.Grafica(unique,count)
 
 
 
