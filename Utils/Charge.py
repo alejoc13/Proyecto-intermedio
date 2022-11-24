@@ -1,7 +1,7 @@
 import csv
 def cargaArchivo(FileName):
+    data = []
     try:
-        data = []
         with open(FileName,'r') as file:
             reader = csv.reader(file,delimiter=',')
             for row in reader:
@@ -12,7 +12,8 @@ def cargaArchivo(FileName):
                     data.append(aux)
         return data,True
     except:
-        return False
+        print("Imposible cargar el archivo")
+        return data,False
 
 
     

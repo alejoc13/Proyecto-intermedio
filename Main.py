@@ -6,7 +6,8 @@ while confirm == False:
     FileName = input(f'Ingresar el nombre del archivo ha utilizar o presione enter para salir:')
     if FileName == '':
         break
-    data,confirm = Charge.cargaArchivo(FileName)
+    else:
+        data,confirm = Charge.cargaArchivo(FileName)
 
 use = input(procesingData.colNames(data))
 var =procesingData.separate(data,use)
