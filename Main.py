@@ -7,13 +7,18 @@ def run():
     while confirm == False:
         FileName = input(f'Ingresar el nombre del archivo ha utilizar o presione enter para salir:')
         if FileName == '':
+            data = ''
             break
         else:
             data,confirm = Charge.cargaArchivo(FileName)
 
     confirm = False
-    menu, cols = procesingData.colNames(data)
+    # menu, cols = procesingData.colNames(data)
     while confirm == False:
+        if data == '':
+            break
+        menu, cols = procesingData.colNames(data)
+
         use = input(menu)
         if use == "":
             break
